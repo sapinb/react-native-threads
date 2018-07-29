@@ -6,6 +6,7 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.devsupport.JSCHeapCapture;
 import com.facebook.react.modules.appstate.AppStateModule;
+import com.facebook.react.modules.blob.BlobModule;
 import com.facebook.react.modules.core.ExceptionsManagerModule;
 import com.facebook.react.modules.core.Timing;
 import com.facebook.react.modules.debug.SourceCodeModule;
@@ -45,6 +46,7 @@ public class ThreadBaseReactPackage implements ReactPackage {
 
                 // Main list
                 new AsyncStorageModule(catalystApplicationContext),
+                new BlobModule(catalystApplicationContext),
                 new IntentModule(catalystApplicationContext),
                 new LocationModule(catalystApplicationContext),
                 new NetworkingModule(catalystApplicationContext),
